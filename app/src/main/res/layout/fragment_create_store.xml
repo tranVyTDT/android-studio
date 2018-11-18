@@ -18,21 +18,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/create"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="50dp"
                 android:textSize="10dp"
                 android:text="Create Store" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="10dp"
-                android:inputType="textPersonName"
-                android:text="Type Your Store's Name Here " />
+                android:hint="Type Your Store's Name Here "/>
         </LinearLayout>
 
         <LinearLayout
