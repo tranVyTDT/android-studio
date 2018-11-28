@@ -1,5 +1,6 @@
 package com.example.hp.assignment;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -102,18 +103,22 @@ public class CreateStore extends Fragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, final View convertView, final ViewGroup parent) {
+            final String storeName = list.get(position).getNameOfstore();
             View listView  = getLayoutInflater().inflate(R.layout.listofstore , null);
 
             TextView textView = listView.findViewById(R.id.storename);
             Button button = listView.findViewById(R.id.join);
 
-            textView.setText(list.get(position).getNameOfstore());
+            textView.setText(storeName);
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // jump to the store that user will choose;
+                    Intent intent = new Intent(getActivity(),Main2Activity.class);
+                    intent.putExtra("storeName",storeName);
+                    startActivity(intent);
                 }
             });
 

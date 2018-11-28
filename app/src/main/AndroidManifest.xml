@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".employee" />
-        <activity android:name=".manager"></activity>
+        <activity android:name=".manager" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
