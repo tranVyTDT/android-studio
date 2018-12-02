@@ -1,0 +1,33 @@
+{
+	"Store": [{
+			"StoreName": "example1",
+			"tables": 3,
+			"dishes": [
+				"soup",
+				"chickens",
+				"beef"
+			],
+			"price": [
+				10,
+				5,
+				7
+			]
+		},
+		{
+			"StoreName": "example2",
+			"tables": 4,
+			"dishes": [
+				"eggs",
+				"pizza",
+				"burger",
+				"water"
+			],
+			"price": [
+				10,
+				5,
+				7,
+				1
+			]
+		}
+	]
+}
