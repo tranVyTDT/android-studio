@@ -14,6 +14,7 @@ public class Store {
         this.setDishes(dishes);
         this.setPrice(price);
     }
+    public Store(){}
 
     public String getStoreName() {
         return StoreName;

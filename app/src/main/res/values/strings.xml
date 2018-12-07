@@ -3,4 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_0_tables">0 tables</string>
+    <string name="finish">finish</string>
+    <string name="delete">delete</string>
+    <string name="add">plus</string>
+    <string name="button">Button</string>
+    <string name="price">price</string>
+    <string name="name_of_dishes">name of dishes</string>
+    <string name="adddish" />
+    <string name="adddishes" />
+    <string name="history" />
 </resources>

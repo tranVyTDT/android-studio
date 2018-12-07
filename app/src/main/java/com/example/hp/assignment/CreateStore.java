@@ -14,7 +14,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -23,7 +29,7 @@ import java.util.Set;
 
 
 public class CreateStore extends Fragment {
-
+    Firebase firebase ,firebasec1;
     ListView listOfStore;
     ArrayList<Stores> list;
     Button button;
@@ -39,6 +45,7 @@ public class CreateStore extends Fragment {
         listOfStore = view.findViewById(R.id.listOfStore);
         create = view.findViewById(R.id.create);
         name = view.findViewById(R.id.name);
+        Firebase.setAndroidContext(getActivity());
 
 
         final CustomAdapter customAdapter = new CustomAdapter();
@@ -46,18 +53,52 @@ public class CreateStore extends Fragment {
 
         sharedPreferences = this.getActivity().getSharedPreferences("store",0);
         editor = sharedPreferences.edit();
-        Set<String> load = sharedPreferences.getStringSet("storename" , new HashSet<String>());
-        LoadData(load);
+        Firebase.setAndroidContext(getActivity());
+        Firebase FB = new Firebase("https://android-fabfd.firebaseio.com/");
+        //load data to esext store
+        FB.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                String string = dataSnapshot.getKey();
+                Stores stores = new Stores(button,string);
+                list.add(stores);
+                customAdapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                customAdapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        //
+
+        // create new store
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Set<String> store = sharedPreferences.getStringSet("storename" , new HashSet<String>());
                 String nameOfStore = name.getText().toString();
-
-                addData(nameOfStore);
-                store.add(nameOfStore);
+                //json on firebase
+                firebase = new Firebase("https://android-fabfd.firebaseio.com/"+nameOfStore);
+                Firebase table = firebase.child("table");
+                table.setValue(0);
+                //
+                Stores stores = new Stores(button,nameOfStore);
                 editor.clear();
                 editor.putStringSet("storename", store).commit();
                 customAdapter.notifyDataSetChanged();
@@ -69,22 +110,9 @@ public class CreateStore extends Fragment {
 
         return view;
     }
-    public void addData(String name)
-    {
-            Stores temp = new Stores(button,name);
-            list.add(temp);
-    }
 
-    public void LoadData(Set<String> store)
-    {
-        for (Iterator<String> it = store.iterator(); it.hasNext(); ) {
-            Stores temp = new Stores(button,it.next());
-            list.add(temp);
-        }
 
-    }
-
-    class CustomAdapter extends BaseAdapter
+     class CustomAdapter extends BaseAdapter
     {
 
         @Override
