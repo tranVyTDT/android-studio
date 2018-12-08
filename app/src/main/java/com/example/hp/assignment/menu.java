@@ -65,8 +65,11 @@ public class menu extends Fragment implements View.OnClickListener {
                 Firebase table = firebase.child(di);
                 table.setValue(pr);
                 d.add(di);
+                d = new ArrayList<>();
+                p = new ArrayList<>();
                 p.add(Integer.parseInt(pr));
                 myAdapter.notifyDataSetChanged();
+
             }
         });
         //get string form main activity 1
@@ -77,7 +80,7 @@ public class menu extends Fragment implements View.OnClickListener {
         Firebase FB = new Firebase("https://android-fabfd.firebaseio.com/"+bundle.get("storeName"));
 
         //set json data become object
-        if(check){
+
         FB.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -87,6 +90,7 @@ public class menu extends Fragment implements View.OnClickListener {
                 for (DataSnapshot postSnapshot: dataSnapshot.child("dish").getChildren()) {
                     String post = postSnapshot.getKey();
                     int post1 = postSnapshot.getValue(Integer.class);
+
                     d.add(post);
                     p.add(post1);
                 }
@@ -97,7 +101,7 @@ public class menu extends Fragment implements View.OnClickListener {
             public void onCancelled(FirebaseError firebaseError) {
 
             }
-        }); check = false;}
+        });
 
         //
 
