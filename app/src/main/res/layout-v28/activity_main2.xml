@@ -7,41 +7,34 @@
     android:orientation="vertical"
     tools:context=".Main2Activity"
     android:id="@+id/main2"
-    android:background="#b3e5fc">
+    android:background="#73e8ff">
 
     <LinearLayout
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
-
             android:textSize="17dp"
             android:textColor="#000051"
             android:background="#29b6f6"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="3dp"
             android:id="@+id/addtable"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
+            
             android:layout_weight="1"
 
             android:text="add tables"
-            />
+             />
 
         <Button
             android:textSize="17dp"
             android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:background="#29b6f6"
             android:text="add dishes"
@@ -49,8 +42,6 @@
     </LinearLayout>
 
     <ListView
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:id="@+id/order"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -60,13 +51,10 @@
         android:textSize="17dp"
         android:textColor="#000051"
         android:background="#29b6f6"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_margin="6dp"
         android:id="@+id/history"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
+        android:layout_weight="1"
         android:text="history" />
 </LinearLayout>

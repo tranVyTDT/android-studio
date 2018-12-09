@@ -32,6 +32,7 @@ public class hostory extends Fragment {
     ArrayList<String> dish ;
     MyAdapter myAdapter;
     ListView listView;
+    Button historybutton;
 
     public hostory() {
         // Required empty public constructor
@@ -49,6 +50,14 @@ public class hostory extends Fragment {
         table = new ArrayList<>();
         name = new ArrayList<>();
         dish = new ArrayList<>();
+        historybutton = view.findViewById(R.id.historybutton);
+        historybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Outed",Toast.LENGTH_LONG).show();
+                getActivity().onBackPressed();
+            }
+        });
         Intent intent = getActivity().getIntent();
         final Bundle bundle = intent.getExtras();
         myAdapter = new MyAdapter();

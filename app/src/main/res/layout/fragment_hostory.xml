@@ -13,10 +13,17 @@
        android:layout_height="match_parent"
        android:orientation="vertical">
        <Button
+           android:textSize="17dp"
+           android:textColor="#000051"
+           android:background="#29b6f6"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:layout_marginRight="40dp"
+           android:layout_marginLeft="40dp"
            android:id="@+id/historybutton"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="Button" />
+           android:text="Outed" />
 
        <ListView
            android:id="@+id/historylist"

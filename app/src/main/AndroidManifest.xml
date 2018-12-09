@@ -16,8 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".employee" />
-        <activity android:name=".manager" />
         <activity android:name=".Main2Activity"></activity>
     </application>
 

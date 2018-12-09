@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CreateStore">
+    tools:context=".CreateStore"
+    android:background="#b3e5fc">
 
 
     <LinearLayout
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,18 +21,25 @@
             android:orientation="horizontal">
 
             <Button
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:textSize="13dp"
+                android:textColor="#000051"
+                android:background="#29b6f6"
+                android:layout_marginRight="5dp"
                 android:id="@+id/create"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:textSize="10dp"
                 android:text="Create Store" />
 
             <EditText
+                android:layout_margin="3dp"
+                android:textColor="#000051"
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:hint="Type Your Store's Name Here "/>
         </LinearLayout>
 

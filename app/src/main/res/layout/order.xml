@@ -3,9 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#73e8ff"
+    android:padding="5dp">
 
     <TextView
+        android:textSize="17dp"
+        android:textColor="#000051"
         android:id="@+id/namefb"
         android:textAlignment="center"
         android:layout_width="match_parent"
@@ -15,6 +19,8 @@
 
 
     <TextView
+        android:textSize="17dp"
+        android:textColor="#000051"
         android:id="@+id/tablefb"
         android:textAlignment="center"
         android:layout_width="match_parent"
@@ -23,6 +29,8 @@
         android:text="TextView" />
 
     <TextView
+        android:textSize="17dp"
+        android:textColor="#000051"
         android:id="@+id/dishfb"
         android:textAlignment="center"
         android:layout_width="match_parent"
@@ -31,6 +39,11 @@
         android:text="TextView" />
 
     <Button
+        android:textSize="17dp"
+        android:textColor="#000051"
+        android:background="#29b6f6"
+        android:layout_margin="20dp"
+
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

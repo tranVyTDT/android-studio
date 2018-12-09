@@ -8,6 +8,12 @@
     >
 
     <Button
+        android:padding="3dp"
+        android:layout_margin="3dp"
+        android:textSize="13dp"
+        android:textColor="#000051"
+        android:background="#29b6f6"
+        android:layout_marginRight="5dp"
         android:id="@+id/join"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -15,6 +21,9 @@
         android:text="Join" />
 
     <TextView
+        android:textSize="15dp"
+        android:layout_margin="3dp"
+        android:textColor="#000051"
         android:id="@+id/storename"
         android:layout_width="0dp"
         android:layout_height="match_parent"
