@@ -102,7 +102,7 @@ public class menu extends Fragment implements View.OnClickListener {
 
             }
         });
-
+        //Toast.makeText(getActivity(), d.get(0), Toast.LENGTH_SHORT).show();
         //
 
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".employee">
+    tools:context=".employee_user">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,10 +19,8 @@
 
         <TextView
             android:gravity="center"
-            android:id="@+id/txtWelcome"
-            android:text="Welcome to my App"
-            android:textStyle="bold"
-            android:textColor="#23c9b3"
+            android:id="@+id/tvNameStore"
+            android:textColor="@android:color/black"
             android:layout_width="200dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -34,24 +32,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-     <EditText
-         android:id="@+id/edtInputStore"
-         android:layout_weight="1"
-         android:layout_width="0dp"
-         android:hint="Input Name Store"
-         android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btnInputStore"
-            android:text="Enter"
-
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSignUp"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:fButtonColor="#123123"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"
+            />
 
-
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSignIn"
+            android:text="Sign In"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:fButtonColor="#123123"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"
             />
     </LinearLayout>
 
 </RelativeLayout>
-

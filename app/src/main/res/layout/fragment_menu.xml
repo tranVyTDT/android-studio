@@ -50,18 +50,19 @@
                     android:hint="@string/price" />
 
             </LinearLayout>
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/menuelement"/>
-
             <Button
                 android:id="@+id/out"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="out" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/menuelement"/>
+
+
 
         </LinearLayout>
 
